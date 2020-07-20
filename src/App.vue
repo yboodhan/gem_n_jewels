@@ -2,6 +2,8 @@
   <div id="app">
     <p v-if="gems">{{ gems[0].name }} </p>
     <p v-if="gems">{{ gems[1].name }} </p>
+    <p v-if="gems">{{ gems[2].name }} </p>
+    <button v-if="gems" @click="changeItemThree"> Click to change number three</button>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App" v-bind:gems.sync="gems"/>
   </div>
@@ -19,6 +21,12 @@ export default {
     return {
       gems: null
     };
+  },
+  methods: {
+    changeItemThree: function() {
+      console.log('Changing the third item now!');
+      this.gems[2].name = "Number 3 changed to this";
+    }
   },
   async beforeMount() {
       try {
