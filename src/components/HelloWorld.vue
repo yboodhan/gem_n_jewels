@@ -11,7 +11,7 @@
     <hr/>
     </div>
     <button @click="changeItem"> Click to change item 1 </button>
-    <NestedComponent v-bind:gems.sync="gems"/>
+    <NestedComponent v-bind:gems.sync="gems" v-bind:answers.sync="answers"/>
   </div>
   </div>
 </template>
@@ -23,7 +23,8 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
-    gems: Array
+    gems: Array,
+    answers: Object
   },
   components: {
     NestedComponent

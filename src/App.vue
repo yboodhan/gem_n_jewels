@@ -5,7 +5,7 @@
     <p v-if="gems">{{ gems[2].name }} </p>
     <button v-if="gems" @click="changeItemThree"> Click to change number three</button>
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App" v-bind:gems.sync="gems"/>
+    <HelloWorld msg="Welcome to Your Vue.js App" v-bind:gems.sync="gems" v-bind:answers.sync="answers"/>
   </div>
 </template>
 
@@ -19,7 +19,8 @@ export default {
   },
   data: function() {
     return {
-      gems: null
+      gems: null,
+      answers: {}
     };
   },
   methods: {
