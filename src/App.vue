@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <p v-if="gems">{{ gems[0].name }} </p>
+    <p v-if="gems">{{ gems[1].name }} </p>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App" v-bind:gems.sync="gems"/>
   </div>
